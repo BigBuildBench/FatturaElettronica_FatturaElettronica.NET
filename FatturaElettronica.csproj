@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <VersionPrefix>3.4.16</VersionPrefix>
+    <PackageId>FatturaElettronica</PackageId>
+    <Authors>Nicola Iarocci</Authors>
+    <Company>CIR 2000</Company>
+    <Product>FatturaElettronica.NET</Product>
+    <Description>Fattura elettronica per le aziende e la pubblica amministrazione italiana</Description>
+    <Copyright>Copyright © CIR2000 2017-2022</Copyright>
+    <PackageProjectUrl>https://fatturaelettronicaopensource.org</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/FatturaElettronica/FatturaElettronica.NET</RepositoryUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE.txt" Pack="true" PackagePath="\"/>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+    <None Include=".github\workflows\test.yml" Pack="false" PackagePath="\"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Tests\**"/>
+    <Compile Remove="Test\**"/>
+    <EmbeddedResource Remove="Tests\**"/>
+    <EmbeddedResource Remove="Test\**"/>
+    <None Remove="Tests\**"/>
+    <None Remove="Test\**"/>
+  </ItemGroup>
+
+</Project>
